@@ -1,0 +1,456 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services — Premium Catering | M.S. Catering Services{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-inner" data-aos="fade-up">
+            <h1 class="page-title">Our Services</h1>
+            <div class="page-divider"></div>
+            <p class="page-subtitle">
+                Curated culinary experiences honoring South Indian heritage, tailored to elevate
+                every celebration with regal elegance and impeccable hospitality.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICES — ALTERNATING ROWS ============ -->
+<section class="services-detail">
+    <div class="container">
+
+        <!-- ROW 1: Wedding (image left, text right) — SIGNATURE -->
+        <article class="service-row" data-aos="fade-up">
+            <div class="service-row-image">
+                <img src="{% static 'images/service1.jpg' %}" alt="Traditional South Indian wedding banana leaf feast"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="service-row-content">
+                <span class="service-pill pill-signature">
+                    <i data-lucide="sparkles"></i>
+                    SIGNATURE EXPERIENCE
+                </span>
+                <h2 class="service-row-title">Wedding Catering</h2>
+                <p class="service-row-desc">
+                    Transform your special day into a regal celebration. We craft bespoke menus that interweave the rich tapestry of authentic Tamil cuisine with modern presentation. From intricate multi-course banana leaf meals (Elai Sappadu) to opulent dessert displays, every detail is meticulously orchestrated to honor your heritage and delight your guests.
+                </p>
+                <ul class="service-row-list">
+                    <li><span class="list-check"><i data-lucide="check"></i></span> Customized traditional and fusion menus.</li>
+                    <li><span class="list-check"><i data-lucide="check"></i></span> Premium brass and copper serving ware.</li>
+                    <li><span class="list-check"><i data-lucide="check"></i></span> Dedicated hospitality staff in heritage attire.</li>
+                </ul>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary service-row-cta">
+                    BOOK WEDDING CATERING
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ROW 2: Corporate (text left, image right) -->
+        <article class="service-row reverse" data-aos="fade-up">
+            <div class="service-row-image">
+                <img src="{% static 'images/service2.jpg' %}" alt="Corporate buffet catering setup"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="service-row-content">
+                <h2 class="service-row-title">Corporate Catering</h2>
+                <p class="service-row-desc">
+                    Impress clients and inspire teams with our sophisticated corporate dining solutions. We merge the efficiency required for business events with the culinary excellence of high-end hospitality. Whether it's an executive board luncheon, a milestone gala, or daily premium meals, we deliver flawlessly executed experiences tailored to your corporate identity.
+                </p>
+                <ul class="service-row-list">
+                    <li><span class="list-check icon"><i data-lucide="briefcase"></i></span> Sleek, minimalist setup suitable for professional environments.</li>
+                    <li><span class="list-check icon"><i data-lucide="utensils"></i></span> Diverse menu options including executive boxed lunches and buffets.</li>
+                    <li><span class="list-check icon"><i data-lucide="clock"></i></span> Punctual execution and unobtrusive service flow.</li>
+                </ul>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary service-row-cta">
+                    BOOK CORPORATE EVENT
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ROW 3: Birthday (image left, text right) -->
+        <article class="service-row" data-aos="fade-up">
+            <div class="service-row-image">
+                <img src="{% static 'images/service3.jpg' %}" alt="Elegant birthday dessert station setup"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="service-row-content">
+                <h2 class="service-row-title">Birthday Catering</h2>
+                <p class="service-row-desc">
+                    Celebrate life's milestones with flavor and flair. Our birthday catering services range from intimate, culturally rich family gatherings to vibrant, modern parties. We curate playful yet sophisticated menus that appeal to all generations, ensuring your special day is marked by joy and extraordinary taste.
+                </p>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary service-row-cta">
+                    PLAN A BIRTHDAY
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ROW 4: Buffet (text left, image right) -->
+        <article class="service-row reverse" data-aos="fade-up">
+            <div class="service-row-image">
+                <img src="{% static 'images/service4.jpg' %}" alt="Premium buffet catering with live counters"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="service-row-content">
+                <h2 class="service-row-title">Buffet Catering</h2>
+                <p class="service-row-desc">
+                    Experience the grandeur of abundance. Our signature buffet setups are visually stunning landscapes of culinary artistry. We offer an extensive array of dishes, allowing your guests to embark on a personalized gastronomic journey through the diverse flavors of South India and beyond, presented with pristine elegance.
+                </p>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary service-row-cta">
+                    EXPLORE BUFFET OPTIONS
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ROW 5: Outdoor (image left, text right) -->
+        <article class="service-row" data-aos="fade-up">
+            <div class="service-row-image">
+                <img src="{% static 'images/service5.jpg' %}" alt="Outdoor garden wedding catering setup"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="service-row-content">
+                <h2 class="service-row-title">Outdoor Catering</h2>
+                <p class="service-row-desc">
+                    Dine under the open sky with our premium outdoor catering services. We expertly manage the logistics of al fresco dining without compromising on quality or aesthetics. From garden parties to destination weddings, our team ensures a seamless and elegant experience that harmonizes with nature.
+                </p>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary service-row-cta">
+                    BOOK OUTDOOR EVENT
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- ROW 6: Festival (text left, image right) -->
+        <article class="service-row reverse" data-aos="fade-up">
+            <div class="service-row-image">
+                <img src="{% static 'images/service6.jpg' %}" alt="Traditional festival feast with brass lamps"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="service-row-content">
+                <h2 class="service-row-title">Festival Catering</h2>
+                <p class="service-row-desc">
+                    Honor the seasons and traditions with our specialized festival catering. We prepare authentic, culturally significant delicacies tailored for occasions like Pongal, Diwali, and regional celebrations. Our feasts are designed to evoke nostalgia while presenting traditional recipes with modern refinement and utmost purity.
+                </p>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary service-row-cta">
+                    PLAN FESTIVAL FEAST
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- ============ SERVICE COMPARISON TABLE ============ -->
+<section class="comparison-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Compare Packages</span>
+            <h2 class="section-title">Choose Your Perfect Package</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Compare our services to find the perfect fit for your event</p>
+        </div>
+
+        <div class="comparison-table-wrap" data-aos="fade-up">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Wedding</th>
+                        <th>Corporate</th>
+                        <th>Birthday</th>
+                        <th>Buffet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Customized Menu</td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Service Staff</td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><span class="badge-optional">Optional</span></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Dietary Options</td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Live Cooking</td>
+                        <td><span class="badge-optional">Optional</span></td>
+                        <td><span class="badge-optional">Optional</span></td>
+                        <td><span class="badge-optional">Optional</span></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Tableware Provided</td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                        <td><span class="badge-optional">Optional</span></td>
+                        <td><span class="badge-optional">Optional</span></td>
+                        <td><i data-lucide="check" class="check-yes"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Decoration Setup</td>
+                        <td><span class="badge-coord">Coordination</span></td>
+                        <td><span class="dash">—</span></td>
+                        <td><span class="badge-coord">Coordination</span></td>
+                        <td><span class="dash">—</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Minimum Guests</td>
+                        <td class="min-guests">50+</td>
+                        <td class="min-guests">25+</td>
+                        <td class="min-guests">15+</td>
+                        <td class="min-guests">30+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ============ OUR PROCESS ============ -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">How We Work</span>
+            <h2 class="section-title">Our Catering Process</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">From consultation to execution, we ensure a seamless experience</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+                <div class="process-number">01</div>
+                <div class="process-icon"><i data-lucide="message-circle"></i></div>
+                <h3>Consultation</h3>
+                <p>Meet with our team to discuss your vision, preferences, and requirements</p>
+            </div>
+
+            <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-number">02</div>
+                <div class="process-icon"><i data-lucide="clipboard-list"></i></div>
+                <h3>Menu Planning</h3>
+                <p>Customize your menu with our culinary experts, considering all dietary needs</p>
+            </div>
+
+            <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-number">03</div>
+                <div class="process-icon"><i data-lucide="chef-hat"></i></div>
+                <h3>Preparation</h3>
+                <p>Our team prepares everything with precision and attention to detail</p>
+            </div>
+
+            <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                <div class="process-number">04</div>
+                <div class="process-icon"><i data-lucide="party-popper"></i></div>
+                <h3>Execution</h3>
+                <p>Perfect service delivery ensuring your guests have a memorable experience</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SPECIAL OFFERINGS ============ -->
+<section class="special-offerings">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Add-ons</span>
+            <h2 class="section-title">Special Offerings</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="offerings-grid">
+            <article class="offering-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="offering-icon"><i data-lucide="flame"></i></div>
+                <h3>Live Cooking Stations</h3>
+                <p>Engage your guests with interactive cooking stations where our chefs prepare dishes right in front of them.</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Live Dosa Counter</li>
+                    <li><i data-lucide="check"></i> Paneer Tikka Grilling</li>
+                    <li><i data-lucide="check"></i> Fried Rice Wok</li>
+                    <li><i data-lucide="check"></i> Dessert Preparation</li>
+                </ul>
+            </article>
+
+            <article class="offering-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="offering-icon"><i data-lucide="sparkles"></i></div>
+                <h3>Themed Events</h3>
+                <p>Specialized catering for themed celebrations with matching cuisine and presentation.</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Traditional Festival Themes</li>
+                    <li><i data-lucide="check"></i> Modern Fusion Events</li>
+                    <li><i data-lucide="check"></i> International Cuisine</li>
+                    <li><i data-lucide="check"></i> Pop-up Dining</li>
+                </ul>
+            </article>
+
+            <article class="offering-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="offering-icon"><i data-lucide="salad"></i></div>
+                <h3>Dietary Specialization</h3>
+                <p>We accommodate all dietary preferences with specialized menus prepared separately.</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Vegetarian &amp; Vegan</li>
+                    <li><i data-lucide="check"></i> Gluten-Free Options</li>
+                    <li><i data-lucide="check"></i> Sugar-Free Desserts</li>
+                    <li><i data-lucide="check"></i> Allergen-Free Meals</li>
+                </ul>
+            </article>
+
+            <article class="offering-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="offering-icon"><i data-lucide="tent"></i></div>
+                <h3>Outdoor Catering</h3>
+                <p>Complete outdoor catering with equipment, setup, and professional service.</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Portable Kitchen Setup</li>
+                    <li><i data-lucide="check"></i> Generator &amp; Lighting</li>
+                    <li><i data-lucide="check"></i> Full Tableware</li>
+                    <li><i data-lucide="check"></i> Weather Protection</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PRICING GUIDE ============ -->
+<section class="pricing-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Transparent Pricing</span>
+            <h2 class="section-title">Pricing Guide</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Transparent pricing with no hidden charges. All prices are per person.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <article class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                <h3>Standard Menu</h3>
+                <p class="pricing-sub">Per Person</p>
+                <div class="pricing-amount">
+                    <span class="currency">₹</span>300<span class="dash">–</span>500
+                </div>
+                <ul>
+                    <li><i data-lucide="check"></i> 5–6 dishes</li>
+                    <li><i data-lucide="check"></i> Basic service</li>
+                    <li><i data-lucide="check"></i> Customization</li>
+                </ul>
+                <a href="{% url 'main:book_now' %}" class="btn btn-outline btn-block">Inquire Now</a>
+            </article>
+
+            <article class="pricing-card popular" data-aos="fade-up" data-aos-delay="100">
+                <span class="popular-badge">MOST POPULAR</span>
+                <h3>Premium Menu</h3>
+                <p class="pricing-sub">Per Person</p>
+                <div class="pricing-amount">
+                    <span class="currency">₹</span>500<span class="dash">–</span>800
+                </div>
+                <ul>
+                    <li><i data-lucide="check"></i> 8–10 dishes</li>
+                    <li><i data-lucide="check"></i> Professional service</li>
+                    <li><i data-lucide="check"></i> Premium ingredients</li>
+                </ul>
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary btn-block">Book Now</a>
+            </article>
+
+            <article class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Luxury Menu</h3>
+                <p class="pricing-sub">Per Person</p>
+                <div class="pricing-amount">
+                    <span class="currency">₹</span>800<span class="plus">+</span>
+                </div>
+                <ul>
+                    <li><i data-lucide="check"></i> 12+ signature dishes</li>
+                    <li><i data-lucide="check"></i> Dedicated service team</li>
+                    <li><i data-lucide="check"></i> Custom experience</li>
+                </ul>
+                <a href="{% url 'main:book_now' %}" class="btn btn-outline btn-block">Inquire Now</a>
+            </article>
+        </div>
+
+        <p class="pricing-note" data-aos="fade-up">
+            Prices include menu customization, service, and standard tableware. Additional charges apply for outdoor setup, premium add-ons, and special requirements.
+        </p>
+    </div>
+</section>
+
+<!-- ============ WHY OUR SERVICES STAND OUT ============ -->
+<section class="why-services">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow gold-on-dark">The Difference</span>
+            <h2 class="section-title white">Why Our Services Stand Out</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="why-services-grid">
+            <div class="why-services-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="why-services-icon"><i data-lucide="target"></i></div>
+                <div>
+                    <h3>Personalized Experience</h3>
+                    <p>Each event is unique, and we tailor our services to match your vision perfectly</p>
+                </div>
+            </div>
+
+            <div class="why-services-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-services-icon"><i data-lucide="award"></i></div>
+                <div>
+                    <h3>Expert Team</h3>
+                    <p>22 years of experience with dedicated, trained professionals</p>
+                </div>
+            </div>
+
+            <div class="why-services-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="why-services-icon"><i data-lucide="utensils"></i></div>
+                <div>
+                    <h3>Quality Assurance</h3>
+                    <p>Premium ingredients and meticulous preparation for every dish</p>
+                </div>
+            </div>
+
+            <div class="why-services-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="why-services-icon"><i data-lucide="handshake"></i></div>
+                <div>
+                    <h3>Complete Support</h3>
+                    <p>From planning to execution, we're with you every step of the way</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Ready to Book Your Event?</h2>
+            <p>Let's discuss your catering needs and create an unforgettable experience.</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:book_now' %}" class="btn btn-white btn-large">
+                    Book Your Catering Today
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{% url 'main:contact' %}" class="btn btn-outline btn-large">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

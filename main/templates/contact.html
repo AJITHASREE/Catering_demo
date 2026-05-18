@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Let's Plan Your Feast — Contact | M.S. Catering Services{% endblock %}
+
+{% block content %}
+
+<!-- ============ CONTACT HEADER ============ -->
+<section class="contact-section">
+    <div class="contact-grid-pattern" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="contact-header" data-aos="fade-up">
+            <h1 class="contact-title">Let's Plan Your Feast</h1>
+            <p class="contact-subtitle">
+                Reach out to discuss your upcoming event. Whether it's a grand wedding or an intimate gathering, our heritage recipes and impeccable service await.
+            </p>
+        </div>
+
+        <!-- Main Contact Grid -->
+        <div class="contact-grid">
+
+            <!-- ===== LEFT: INQUIRY FORM ===== -->
+            <div class="inquiry-form-wrap" data-aos="fade-right">
+                <div class="inquiry-form-header">
+                    <i data-lucide="mail" class="inquiry-icon"></i>
+                    <h2>Inquire Now</h2>
+                </div>
+
+                <form id="contactForm" class="inquiry-form">
+                    {% csrf_token %}
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="eventDate">Event Date</label>
+                            <input type="date" id="eventDate" name="event_date">
+                        </div>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="eventType">Select Event Type</label>
+                        <div class="select-wrap">
+                            <select id="eventType" name="event_type">
+                                <option value="">Choose an option</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="festival">Festival Celebration</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <i data-lucide="chevron-down" class="select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="message">Event Details &amp; Specific Requirements</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your vision, dietary needs, guest count, and any special requests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary inquiry-submit">
+                        SEND INQUIRY
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+
+                    <p class="form-status" id="formStatus"></p>
+                </form>
+            </div>
+
+            <!-- ===== RIGHT: INFO CARDS ===== -->
+            <aside class="contact-info">
+
+                <!-- Direct Line Card -->
+                <div class="info-card" data-aos="fade-left" data-aos-delay="0">
+                    <div class="info-icon">
+                        <i data-lucide="phone-call"></i>
+                    </div>
+                    <div class="info-body">
+                        <h3>Direct Line</h3>
+                        <p>Speak directly with our event coordinators.</p>
+                        <a href="tel:+919876543210" class="info-link">+91 98765 43210</a>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="info-card" data-aos="fade-left" data-aos-delay="100">
+                    <div class="info-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <div class="info-body">
+                        <h3>WhatsApp</h3>
+                        <p>Quick queries and menu brochures.</p>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="info-link">Message Us</a>
+                    </div>
+                </div>
+
+                <!-- Office Hours Card -->
+                <div class="info-card info-card-hours" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="info-card-title">
+                        <i data-lucide="clock"></i>
+                        Office Hours
+                    </h3>
+                    <div class="hours-row">
+                        <span>Monday – Saturday</span>
+                        <strong>9:00 AM – 7:00 PM</strong>
+                    </div>
+                    <div class="hours-row">
+                        <span>Sunday</span>
+                        <strong>By Appointment</strong>
+                    </div>
+                </div>
+
+                <!-- Visit Us / Map Card -->
+                <a href="https://maps.google.com/?q=Chennai,Tamil+Nadu" target="_blank" rel="noopener" class="map-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="map-bg">
+                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#F4EBD7"/>
+                                    <stop offset="100%" stop-color="#E8D7B8"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="200" fill="url(#mapGrad)"/>
+                            <!-- Grid lines simulating a map -->
+                            <g stroke="#D4A547" stroke-width="0.5" opacity="0.3">
+                                <line x1="0" y1="40" x2="400" y2="40"/>
+                                <line x1="0" y1="80" x2="400" y2="80"/>
+                                <line x1="0" y1="120" x2="400" y2="120"/>
+                                <line x1="0" y1="160" x2="400" y2="160"/>
+                                <line x1="80" y1="0" x2="80" y2="200"/>
+                                <line x1="160" y1="0" x2="160" y2="200"/>
+                                <line x1="240" y1="0" x2="240" y2="200"/>
+                                <line x1="320" y1="0" x2="320" y2="200"/>
+                            </g>
+                            <!-- Curved road -->
+                            <path d="M0,140 Q120,100 200,120 T400,80" stroke="#B8862A" stroke-width="3" fill="none" opacity="0.4"/>
+                            <path d="M50,0 Q70,80 200,100 T380,200" stroke="#B8862A" stroke-width="3" fill="none" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <div class="map-pin">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="map-card-body">
+                        <h3><i data-lucide="map-pin"></i> Visit Us</h3>
+                        <p>123 Heritage Lane, Chennai, TN</p>
+                    </div>
+                </a>
+
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EMBEDDED MAP ============ -->
+<section class="map-embed-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Our Location</span>
+            <h2 class="section-title">Find Us on the Map</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="map-embed-wrap" data-aos="fade-up">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8246718903!2d80.2707!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a0d1234567%3A0x1234567890abcdef!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ============ QUICK FAQ ============ -->
+<section class="faq">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Quick Answers</span>
+            <h2 class="section-title">Quick Questions?</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Find answers to common inquiries</p>
+        </div>
+
+        <div class="faq-wrapper">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <summary>
+                    <span>What is the best way to contact you?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    WhatsApp is the quickest way to reach us. You can also call or email, and we'll respond within 24 hours.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <summary>
+                    <span>How soon can you confirm a booking?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    We typically confirm bookings within 24-48 hours of your inquiry. For urgent events, we may be able to confirm sooner.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <summary>
+                    <span>What should I include in my inquiry?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Please provide your event date, number of guests, preferred cuisine, and any special requirements. This helps us provide a quick quote.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <summary>
+                    <span>Do you offer consultations?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Yes! We offer free initial consultations. Contact us to schedule a meeting with our team to discuss your event.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Ready to Plan Your Event?</h2>
+            <p>Contact us today to discuss your catering needs and get a custom quote.</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:book_now' %}" class="btn btn-white btn-large">
+                    Book Your Event Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            status.textContent = 'Sending your inquiry...';
+            status.className = 'form-status sending';
+
+            // Simulate / replace with real fetch to your backend
+            setTimeout(() => {
+                status.textContent = '✓ Thank you! We will get back to you within 24 hours.';
+                status.className = 'form-status success';
+                form.reset();
+            }, 1200);
+        });
+    });
+</script>
+{% endblock %}

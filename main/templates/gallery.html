@@ -1,0 +1,364 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Heritage In Frames — Gallery | M.S. Catering Services{% endblock %}
+
+{% block content %}
+
+<!-- ============ GALLERY HERO ============ -->
+<section class="gallery-hero">
+    <!-- Decorative circle pattern background -->
+    <div class="gallery-pattern" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="gallery-hero-content" data-aos="fade-up">
+            <h1 class="gallery-hero-title">Our Heritage In Frames</h1>
+            <p class="gallery-hero-subtitle">
+                Immerse yourself in the visual feast of our traditional South Indian catering experiences. Every event is a tapestry of authentic flavors and regal elegance.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ GALLERY GRID ============ -->
+<section class="gallery-section">
+    <div class="gallery-pattern subtle" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="gallery-main-grid">
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="0" data-index="0">
+                <img src="{% static 'images/gallery1.png' %}" alt="Traditional banana leaf thali presentation"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="100" data-index="1">
+                <img src="{% static 'images/gallery2.jpg' %}" alt="Royal sweets display with brass plate"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="200" data-index="2">
+                <img src="{% static 'images/gallery3.jpg' %}" alt="Chef presenting signature dish"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="0" data-index="3">
+                <img src="{% static 'images/gallery4.jpg' %}" alt="Elegant wedding hall buffet setup"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="100" data-index="4">
+                <img src="{% static 'images/gallery5.jpg' %}" alt="Banana leaf platter with curries and rice"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="200" data-index="5">
+                <img src="{% static 'images/gallery6.jpg' %}" alt="Aromatic spices on wooden surface"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="0" data-index="6">
+                <img src="{% static 'images/gallery7.jpg' %}" alt="Live cooking counter with chef"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="100" data-index="7">
+                <img src="{% static 'images/gallery8.jpg' %}" alt="Traditional brass lamp arrangement"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+            <div class="gallery-tile" data-aos="fade-up" data-aos-delay="200" data-index="8">
+                <img src="{% static 'images/gallery9.jpg' %}" alt="Premium dessert platter"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="gallery-tile-overlay">
+                    <i data-lucide="zoom-in"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ FEATURED COLLECTIONS ============ -->
+<section class="collections-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Browse By Event</span>
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="collections-grid">
+            <article class="collection-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="collection-img">
+                    <img src="{% static 'images/gallery_4.png' %}" alt="Weddings collection"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="collection-img-fallback"><i data-lucide="heart"></i></div>
+                </div>
+                <div class="collection-body">
+                    <h3>Weddings</h3>
+                    <p>250+ beautiful wedding celebrations captured in elegant frames</p>
+                    <a href="#" class="collection-link">
+                        View Collection <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="collection-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="collection-img">
+                    <img src="{% static 'images/gallery_7.png' %}" alt="Corporate events collection"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="collection-img-fallback"><i data-lucide="briefcase"></i></div>
+                </div>
+                <div class="collection-body">
+                    <h3>Corporate Events</h3>
+                    <p>180+ professional corporate gatherings with executive elegance</p>
+                    <a href="#" class="collection-link">
+                        View Collection <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="collection-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="collection-img">
+                    <img src="{% static 'images/gallery_2.png' %}" alt="Birthday parties collection"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="collection-img-fallback"><i data-lucide="party-popper"></i></div>
+                </div>
+                <div class="collection-body">
+                    <h3>Birthday Parties</h3>
+                    <p>320+ joyful birthday celebrations filled with warmth and flavor</p>
+                    <a href="#" class="collection-link">
+                        View Collection <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ STATISTICS ============ -->
+<section class="gallery-stats">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow gold-on-dark">By The Numbers</span>
+            <h2 class="section-title white">Our Numbers</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="gallery-stats-grid">
+            <div class="gallery-stat" data-aos="fade-up" data-aos-delay="0">
+                <div class="gallery-stat-icon"><i data-lucide="heart"></i></div>
+                <div class="gallery-stat-num" data-count="1000">1000+</div>
+                <p>Events Catered</p>
+            </div>
+            <div class="gallery-stat" data-aos="fade-up" data-aos-delay="100">
+                <div class="gallery-stat-icon"><i data-lucide="users"></i></div>
+                <div class="gallery-stat-num" data-count="50000">50K+</div>
+                <p>Happy Guests</p>
+            </div>
+            <div class="gallery-stat" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-stat-icon"><i data-lucide="image"></i></div>
+                <div class="gallery-stat-num" data-count="2000">2000+</div>
+                <p>Photos in Gallery</p>
+            </div>
+            <div class="gallery-stat" data-aos="fade-up" data-aos-delay="300">
+                <div class="gallery-stat-icon"><i data-lucide="award"></i></div>
+                <div class="gallery-stat-num" data-count="100">100%</div>
+                <p>Satisfaction Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CLIENT TESTIMONIALS ============ -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Kind Words</span>
+            <h2 class="section-title">What Clients Say About Us</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-quote"><i data-lucide="quote"></i></div>
+                <div class="testimonial-stars">
+                    <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                </div>
+                <p class="testimonial-text">
+                    The photos in the gallery don't do justice to how beautiful our wedding was. M.S. Catering made it perfect!
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AR</div>
+                    <div class="testimonial-author-info">
+                        <h4>Anjali &amp; Rohan</h4>
+                        <p>Wedding — February 2024</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="testimonial-quote"><i data-lucide="quote"></i></div>
+                <div class="testimonial-stars">
+                    <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                </div>
+                <p class="testimonial-text">
+                    Every photo from our company event reflects the professionalism and quality of their service. Highly recommended!
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">VI</div>
+                    <div class="testimonial-author-info">
+                        <h4>Vikram Iyer</h4>
+                        <p>Corporate Event — March 2024</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-quote"><i data-lucide="quote"></i></div>
+                <div class="testimonial-stars">
+                    <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                </div>
+                <p class="testimonial-text">
+                    Looking at these photos makes me want to celebrate again! The food looked incredible and tasted even better.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">PS</div>
+                    <div class="testimonial-author-info">
+                        <h4>Priya Sharma</h4>
+                        <p>Birthday Party — January 2024</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Create Your Own Gallery Moment</h2>
+            <p>Let us cater your next event and become part of our gallery of beautiful celebrations.</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:book_now' %}" class="btn btn-white btn-large">
+                    Book Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{% url 'main:contact' %}" class="btn btn-outline btn-large">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ LIGHTBOX MODAL ============ -->
+<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        <i data-lucide="x"></i>
+    </button>
+
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
+        <i data-lucide="chevron-left"></i>
+    </button>
+
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+        <p class="lightbox-counter" id="lightboxCounter">1 of 9</p>
+    </div>
+
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
+        <i data-lucide="chevron-right"></i>
+    </button>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tiles = document.querySelectorAll('.gallery-tile');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        const images = Array.from(tiles).map(tile => {
+            const img = tile.querySelector('img');
+            return { src: img ? img.src : '', alt: img ? img.alt : '' };
+        });
+        let current = 0;
+
+        function openLightbox(index) {
+            current = index;
+            lightboxImage.src = images[current].src;
+            lightboxImage.alt = images[current].alt;
+            lightboxCounter.textContent = (current + 1) + ' of ' + images.length;
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            if (window.lucide) window.lucide.createIcons();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function nav(direction) {
+            current = (current + direction + images.length) % images.length;
+            lightboxImage.src = images[current].src;
+            lightboxImage.alt = images[current].alt;
+            lightboxCounter.textContent = (current + 1) + ' of ' + images.length;
+        }
+
+        tiles.forEach((tile, i) => {
+            tile.addEventListener('click', () => openLightbox(i));
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => nav(-1));
+        lightboxNext.addEventListener('click', () => nav(1));
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') nav(-1);
+            if (e.key === 'ArrowRight') nav(1);
+        });
+    });
+</script>
+{% endblock %}

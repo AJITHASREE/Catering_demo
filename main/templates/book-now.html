@@ -1,0 +1,471 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Reserve Your Date — Book Now | M.S. Catering Services{% endblock %}
+
+{% block content %}
+
+<!-- ============ BOOKING HEADER ============ -->
+<section class="booking-section">
+    <div class="booking-grid-pattern" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="booking-header" data-aos="fade-up">
+            <span class="hero-pill booking-pill">
+                <i data-lucide="calendar-check"></i>
+                RESERVATION
+            </span>
+            <h1 class="booking-title">Reserve Your Date</h1>
+            <p class="booking-subtitle">
+                Fill out our booking form to secure M.S. Catering Services for your special occasion. We'll respond with a custom quote within 24 hours.
+            </p>
+        </div>
+
+        <!-- Main Booking Grid -->
+        <div class="booking-grid">
+
+            <!-- ===== LEFT: BOOKING FORM ===== -->
+            <div class="booking-form-wrap" data-aos="fade-right">
+                <form id="bookingForm" class="booking-form">
+                    {% csrf_token %}
+
+                    <!-- ===== Personal Information ===== -->
+                    <div class="booking-fieldset">
+                        <div class="booking-fieldset-header">
+                            <span class="fieldset-num">01</span>
+                            <h3>Personal Information</h3>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="bookName">Full Name *</label>
+                                <input type="text" id="bookName" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="bookEmail">Email Address *</label>
+                                <input type="email" id="bookEmail" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="bookPhone">Phone Number *</label>
+                            <input type="tel" id="bookPhone" name="phone" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+
+                    <!-- ===== Event Information ===== -->
+                    <div class="booking-fieldset">
+                        <div class="booking-fieldset-header">
+                            <span class="fieldset-num">02</span>
+                            <h3>Event Information</h3>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="bookEventType">Event Type *</label>
+                                <div class="select-wrap">
+                                    <select id="bookEventType" name="event_type" required>
+                                        <option value="">Select event type</option>
+                                        <option value="Wedding">Wedding</option>
+                                        <option value="Corporate Event">Corporate Event</option>
+                                        <option value="Birthday Party">Birthday Party</option>
+                                        <option value="Festival Celebration">Festival Celebration</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Engagement">Engagement</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="select-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="bookEventDate">Event Date *</label>
+                                <input type="date" id="bookEventDate" name="event_date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="bookEventTime">Event Time *</label>
+                                <input type="time" id="bookEventTime" name="event_time" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="bookVenue">Venue Location *</label>
+                                <input type="text" id="bookVenue" name="venue" placeholder="Location or venue name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Guest Information ===== -->
+                    <div class="booking-fieldset">
+                        <div class="booking-fieldset-header">
+                            <span class="fieldset-num">03</span>
+                            <h3>Guest Information</h3>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="bookGuests">Number of Guests *</label>
+                                <div class="select-wrap">
+                                    <select id="bookGuests" name="guest_count" required>
+                                        <option value="">Select guest range</option>
+                                        <option value="15-25">15 – 25 guests</option>
+                                        <option value="26-50">26 – 50 guests</option>
+                                        <option value="51-100">51 – 100 guests</option>
+                                        <option value="101-200">101 – 200 guests</option>
+                                        <option value="201-500">201 – 500 guests</option>
+                                        <option value="500+">500+ guests</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="select-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="bookVegPercent">Vegetarian Guests (%)</label>
+                                <input type="number" id="bookVegPercent" name="vegetarian_percent" placeholder="e.g., 75" min="0" max="100">
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="bookDietary">Dietary Restrictions</label>
+                            <textarea id="bookDietary" name="dietary_restrictions" rows="3" placeholder="e.g., gluten-free, no onion/garlic, allergies, vegan options..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- ===== Catering Preferences ===== -->
+                    <div class="booking-fieldset">
+                        <div class="booking-fieldset-header">
+                            <span class="fieldset-num">04</span>
+                            <h3>Catering Preferences</h3>
+                        </div>
+
+                        <div class="form-field full">
+                            <label class="service-label">Service Type *</label>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service_type" value="Buffet Service" required>
+                                    <span class="service-option-card">
+                                        <i data-lucide="utensils"></i>
+                                        <span>Buffet Service</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service_type" value="Plated Service">
+                                    <span class="service-option-card">
+                                        <i data-lucide="utensils-crossed"></i>
+                                        <span>Plated Service</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service_type" value="Cocktail Service">
+                                    <span class="service-option-card">
+                                        <i data-lucide="wine"></i>
+                                        <span>Cocktail Service</span>
+                                    </span>
+                                </label>
+                                <label class="service-option">
+                                    <input type="radio" name="service_type" value="Live Counter">
+                                    <span class="service-option-card">
+                                        <i data-lucide="flame"></i>
+                                        <span>Live Counter</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="bookMenuStyle">Preferred Menu Style *</label>
+                            <div class="select-wrap">
+                                <select id="bookMenuStyle" name="menu_style" required>
+                                    <option value="">Select menu style</option>
+                                    <option value="Traditional South Indian">Traditional South Indian</option>
+                                    <option value="Modern Fusion">Modern Fusion</option>
+                                    <option value="Multi-cuisine">Multi-cuisine</option>
+                                    <option value="Fully Custom">Fully Custom</option>
+                                </select>
+                                <i data-lucide="chevron-down" class="select-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="bookSpecial">Special Requests or Notes</label>
+                            <textarea id="bookSpecial" name="special_requests" rows="4" placeholder="Any special requirements, themes, decor preferences, or other notes..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary booking-submit">
+                        SUBMIT BOOKING REQUEST
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+
+                    <p class="form-status" id="bookingStatus"></p>
+                </form>
+            </div>
+
+            <!-- ===== RIGHT: BOOKING SUMMARY (sticky) ===== -->
+            <aside class="booking-summary-wrap">
+                <div class="booking-summary" data-aos="fade-left">
+                    <div class="summary-header">
+                        <i data-lucide="clipboard-list" class="summary-icon"></i>
+                        <h3>Booking Summary</h3>
+                    </div>
+
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <span class="summary-label">Event Type</span>
+                            <span class="summary-value" id="summaryEventType">Not selected</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Event Date</span>
+                            <span class="summary-value" id="summaryEventDate">Not selected</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Guests</span>
+                            <span class="summary-value" id="summaryGuests">Not selected</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Service Type</span>
+                            <span class="summary-value" id="summaryService">Not selected</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Menu Style</span>
+                            <span class="summary-value" id="summaryMenu">Not selected</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-pricing">
+                        <p class="pricing-label">Estimated starting price</p>
+                        <p class="pricing-amount">
+                            <span class="currency">₹</span>300<span class="dash">–</span>800
+                        </p>
+                        <p class="pricing-note">Per person · Final quote after consultation</p>
+                    </div>
+
+                    <div class="summary-cta">
+                        <div class="summary-cta-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div>
+                            <h4>Quick &amp; Easy</h4>
+                            <p>We'll respond within 24 hours with a custom quote tailored to your event.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BOOKING PROCESS ============ -->
+<section class="booking-process">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">How It Works</span>
+            <h2 class="section-title">Our Booking Process</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Four simple steps from inquiry to celebration</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="0">
+                <div class="timeline-icon">
+                    <i data-lucide="file-text"></i>
+                </div>
+                <div class="timeline-num">01</div>
+                <h3>Submit Request</h3>
+                <p>Fill out the booking form with your event details and preferences</p>
+            </div>
+
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="150">
+                <div class="timeline-icon">
+                    <i data-lucide="message-circle"></i>
+                </div>
+                <div class="timeline-num">02</div>
+                <h3>Consultation Call</h3>
+                <p>Our team contacts you within 24 hours to discuss details</p>
+            </div>
+
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-icon">
+                    <i data-lucide="receipt"></i>
+                </div>
+                <div class="timeline-num">03</div>
+                <h3>Custom Quote</h3>
+                <p>Receive a tailored quote with menu options and pricing</p>
+            </div>
+
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="450">
+                <div class="timeline-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+                <div class="timeline-num">04</div>
+                <h3>Confirm &amp; Celebrate</h3>
+                <p>Finalize details and let us make your event unforgettable</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BOOKING FAQ ============ -->
+<section class="faq">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Questions Answered</span>
+            <h2 class="section-title">Booking FAQs</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="faq-wrapper">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <summary>
+                    <span>How soon should I book in advance?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    For weddings, we recommend 2-3 months in advance. For other events, 2-4 weeks is typically sufficient. However, we always try to accommodate last-minute requests based on availability.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <summary>
+                    <span>What payment methods do you accept?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    We accept cash, bank transfer, cheque, UPI, and online payment methods. A deposit is required to confirm the booking, with the balance due before the event.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <summary>
+                    <span>Can I change the booking details later?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Yes, you can modify guest count, menu, or other details up to 2 weeks before the event. Changes made closer to the event may incur additional charges.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <summary>
+                    <span>What's the cancellation policy?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Cancellations made 30 days in advance receive a full refund. Cancellations within 30 days of the event may incur a cancellation charge based on our policy.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <summary>
+                    <span>Do you offer tasting sessions before booking?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Yes! For weddings and large events, we offer complimentary tasting sessions after the initial consultation. This helps you finalize your menu with confidence.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust-strip">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="0">
+                <i data-lucide="shield-check"></i>
+                <h4>Secure Booking</h4>
+                <p>Your details are safe with us</p>
+            </div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="clock"></i>
+                <h4>24-Hour Response</h4>
+                <p>Quick turnaround on quotes</p>
+            </div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="award"></i>
+                <h4>22+ Years Experience</h4>
+                <p>Trusted by 1000+ clients</p>
+            </div>
+            <div class="trust-item" data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="heart-handshake"></i>
+                <h4>No Obligation</h4>
+                <p>Free quote, no commitment</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Live booking summary
+        const eventType = document.getElementById('bookEventType');
+        const eventDate = document.getElementById('bookEventDate');
+        const guests = document.getElementById('bookGuests');
+        const menuStyle = document.getElementById('bookMenuStyle');
+        const serviceRadios = document.querySelectorAll('input[name="service_type"]');
+
+        const summaryEventType = document.getElementById('summaryEventType');
+        const summaryEventDate = document.getElementById('summaryEventDate');
+        const summaryGuests = document.getElementById('summaryGuests');
+        const summaryService = document.getElementById('summaryService');
+        const summaryMenu = document.getElementById('summaryMenu');
+
+        function setValue(el, value) {
+            if (value && value !== '') {
+                el.textContent = value;
+                el.classList.add('has-value');
+            } else {
+                el.textContent = 'Not selected';
+                el.classList.remove('has-value');
+            }
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+        }
+
+        function updateSummary() {
+            setValue(summaryEventType, eventType.value);
+            setValue(summaryEventDate, formatDate(eventDate.value));
+            setValue(summaryGuests, guests.value ? guests.value + ' guests' : '');
+
+            const selectedService = Array.from(serviceRadios).find(r => r.checked);
+            setValue(summaryService, selectedService ? selectedService.value : '');
+            setValue(summaryMenu, menuStyle.value);
+        }
+
+        eventType.addEventListener('change', updateSummary);
+        eventDate.addEventListener('change', updateSummary);
+        guests.addEventListener('change', updateSummary);
+        menuStyle.addEventListener('change', updateSummary);
+        serviceRadios.forEach(radio => radio.addEventListener('change', updateSummary));
+
+        // Form submission
+        const form = document.getElementById('bookingForm');
+        const status = document.getElementById('bookingStatus');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            status.textContent = 'Submitting your request...';
+            status.className = 'form-status sending';
+
+            // Replace with real backend call:
+            // fetch('{% url "main:submit_booking" %}', {...})
+            setTimeout(() => {
+                status.textContent = '✓ Booking request submitted! We will contact you within 24 hours.';
+                status.className = 'form-status success';
+                form.reset();
+                updateSummary();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1500);
+        });
+    });
+</script>
+{% endblock %}

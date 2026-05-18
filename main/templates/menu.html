@@ -1,0 +1,558 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Culinary Heritage — Menu | M.S. Catering Services{% endblock %}
+
+{% block content %}
+
+<!-- ============ MENU HERO ============ -->
+<section class="menu-hero">
+    <div class="menu-hero-bg">
+        <img src="{% static 'images/wedding_image.png' %}" alt="Traditional South Indian thali with brass bowls and steaming curries" loading="eager"
+             onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+    </div>
+    <div class="menu-hero-overlay"></div>
+
+    <div class="container menu-hero-content" data-aos="fade-up">
+        <div class="menu-hero-ornament">
+            <i data-lucide="sparkle"></i>
+        </div>
+        <h1 class="menu-hero-title">Our Culinary Heritage</h1>
+        <p class="menu-hero-subtitle">
+            Experience the regal flavors of Tamil Nadu. Each dish is a masterpiece crafted with generational recipes, premium ingredients, and boundless devotion.
+        </p>
+    </div>
+</section>
+
+<!-- ============ MENU FILTER TABS ============ -->
+<section class="menu-tabs-section">
+    <div class="container">
+        <div class="menu-tabs" data-aos="fade-up">
+            <button class="menu-tab active" data-tab="vaazhai-ilai">Traditional Vaazhai Ilai Sapadu</button>
+            <button class="menu-tab" data-tab="wedding">Wedding Specials</button>
+            <button class="menu-tab" data-tab="buffet">Buffet Specials</button>
+            <button class="menu-tab" data-tab="live">Live Counters</button>
+        </div>
+        <div class="menu-tabs-divider"></div>
+    </div>
+</section>
+
+<!-- ============ MENU FEATURE PANEL ============ -->
+<section class="menu-feature">
+    <div class="container">
+        <!-- ===== VAAZHAI ILAI PANEL ===== -->
+        <div class="menu-panel active" id="panel-vaazhai-ilai" data-aos="fade-up">
+            <div class="menu-panel-header">
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+                <h2 class="menu-panel-title">Traditional Vaazhai Ilai Sapadu</h2>
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+            </div>
+            <p class="menu-panel-subtitle">
+                The quintessential South Indian dining experience, served with honor on a pristine banana leaf. A symphony of six tastes, carefully balanced for holistic well-being.
+            </p>
+
+            <div class="menu-feature-grid">
+                <!-- Featured image card -->
+                <div class="menu-feature-card">
+                    <img src="{% static 'images/menu1.jpg' %}" alt="The Grand Kalyana Virundhu - Traditional banana leaf feast"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="menu-feature-card-overlay">
+                        <span class="vegan-pill">
+                            <i data-lucide="leaf"></i>
+                            Authentic Vegan
+                        </span>
+                        <h3>The Grand Kalyana Virundhu</h3>
+                        <p>A majestic 24-item spread featuring our signature Chettinad specialties, delicate sweets, and aromatic sambar.</p>
+                    </div>
+                </div>
+
+                <!-- Course Sequence sidebar -->
+                <aside class="course-sequence">
+                    <div class="course-icon">
+                        <i data-lucide="utensils-crossed"></i>
+                    </div>
+                    <h3>Course Sequence</h3>
+                    <ul>
+                        <li>
+                            <i data-lucide="star" class="course-star"></i>
+                            <span><strong>Welcome:</strong> Panakam &amp; Neer Mor</span>
+                        </li>
+                        <li>
+                            <i data-lucide="star" class="course-star"></i>
+                            <span><strong>Starters:</strong> Medhu Vada, Sweet Pachadi</span>
+                        </li>
+                        <li>
+                            <i data-lucide="star" class="course-star"></i>
+                            <span><strong>Main:</strong> Sambar, Rasam, Kara Kuzhambu</span>
+                        </li>
+                        <li>
+                            <i data-lucide="star" class="course-star"></i>
+                            <span><strong>Dessert:</strong> Elaneer Payasam</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="view-pdf-link">
+                        View Full Menu PDF
+                        <span class="view-pdf-underline"></span>
+                    </a>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ===== WEDDING SPECIALS PANEL ===== -->
+        <div class="menu-panel" id="panel-wedding">
+            <div class="menu-panel-header">
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+                <h2 class="menu-panel-title">Wedding Specials</h2>
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+            </div>
+            <p class="menu-panel-subtitle">
+                Lavish wedding feasts crafted for royalty. Fragrant biryanis, decadent paneer preparations, and signature gravies that create unforgettable celebrations.
+            </p>
+
+            <div class="menu-feature-grid">
+                <div class="menu-feature-card">
+                    <img src="{% static 'images/menu2.jpg' %}" alt="Wedding feast with fragrant biryani"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="menu-feature-card-overlay">
+                        <span class="vegan-pill non-veg">
+                            <i data-lucide="utensils"></i>
+                            Premium Selection
+                        </span>
+                        <h3>The Royal Wedding Banquet</h3>
+                        <p>A regal multi-cuisine spread featuring fragrant Hyderabadi biryani, signature Paneer 65, and butter-rich Murgh Makhani.</p>
+                    </div>
+                </div>
+
+                <aside class="course-sequence">
+                    <div class="course-icon"><i data-lucide="heart"></i></div>
+                    <h3>Wedding Highlights</h3>
+                    <ul>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Welcome:</strong> Saffron Lassi, Rose Sharbat</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Starters:</strong> Paneer 65, Chicken Tikka</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Main:</strong> Hyderabadi Biryani, Murgh Makhani</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Dessert:</strong> Gulab Jamun, Kulfi</span></li>
+                    </ul>
+                    <a href="#" class="view-pdf-link">
+                        View Full Menu PDF
+                        <span class="view-pdf-underline"></span>
+                    </a>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ===== BUFFET SPECIALS PANEL ===== -->
+        <div class="menu-panel" id="panel-buffet">
+            <div class="menu-panel-header">
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+                <h2 class="menu-panel-title">Buffet Specials</h2>
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+            </div>
+            <p class="menu-panel-subtitle">
+                Modern multi-cuisine spreads featuring live cooking counters and premium displays — a feast for both eyes and palate.
+            </p>
+
+            <div class="menu-feature-grid">
+                <div class="menu-feature-card">
+                    <img src="{% static 'images/gallery8.jpg' %}" alt="Premium buffet spread"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="menu-feature-card-overlay">
+                        <span class="vegan-pill">
+                            <i data-lucide="layout-grid"></i>
+                            Multi-Cuisine
+                        </span>
+                        <h3>The Grand International Buffet</h3>
+                        <p>An elaborate spread of South Indian classics, North Indian specialties, Continental favorites, and Asian-inspired delights.</p>
+                    </div>
+                </div>
+
+                <aside class="course-sequence">
+                    <div class="course-icon"><i data-lucide="utensils"></i></div>
+                    <h3>Buffet Highlights</h3>
+                    <ul>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Live Counter:</strong> Dosa, Chaat, Pasta</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Starters:</strong> Paneer Tikka, Gobi Manchurian</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Main:</strong> Biryani, Curries, Continental</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Dessert:</strong> Ice Cream, Halwa, Pastries</span></li>
+                    </ul>
+                    <a href="#" class="view-pdf-link">
+                        View Full Menu PDF
+                        <span class="view-pdf-underline"></span>
+                    </a>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ===== LIVE COUNTERS PANEL ===== -->
+        <div class="menu-panel" id="panel-live">
+            <div class="menu-panel-header">
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+                <h2 class="menu-panel-title">Live Counters</h2>
+                <i data-lucide="flower-2" class="ornament-leaf"></i>
+            </div>
+            <p class="menu-panel-subtitle">
+                Interactive cooking stations where our master chefs prepare dishes fresh in front of your guests — entertainment meets gastronomy.
+            </p>
+
+            <div class="menu-feature-grid">
+                <div class="menu-feature-card">
+                    <img src="{% static 'images/menu4.jpg' %}" alt="Live cooking counter with chef"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                    <div class="menu-feature-card-overlay">
+                        <span class="vegan-pill">
+                            <i data-lucide="flame"></i>
+                            Interactive Experience
+                        </span>
+                        <h3>The Chef's Theater</h3>
+                        <p>Watch our master chefs in action as they prepare signature dishes from sizzling dosas to handcrafted desserts right before your eyes.</p>
+                    </div>
+                </div>
+
+                <aside class="course-sequence">
+                    <div class="course-icon"><i data-lucide="flame"></i></div>
+                    <h3>Live Stations</h3>
+                    <ul>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Dosa Counter:</strong> Masala, Onion, Ghee Roast</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Chaat Counter:</strong> Pani Puri, Sev Puri</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Tikka Grill:</strong> Paneer, Chicken, Vegetable</span></li>
+                        <li><i data-lucide="star" class="course-star"></i><span><strong>Dessert Bar:</strong> Jalebi, Pan, Ice Cream</span></li>
+                    </ul>
+                    <a href="#" class="view-pdf-link">
+                        View Full Menu PDF
+                        <span class="view-pdf-underline"></span>
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ DIETARY OPTIONS ============ -->
+<section class="dietary-options">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">For Everyone</span>
+            <h2 class="section-title">Dietary Options</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">We accommodate all dietary preferences with dedicated preparation</p>
+        </div>
+
+        <div class="dietary-grid">
+            <article class="dietary-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="dietary-icon"><i data-lucide="leaf"></i></div>
+                <h3>Vegetarian</h3>
+                <p>Complete vegetarian menus with diverse vegetable and legume preparations</p>
+            </article>
+
+            <article class="dietary-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="dietary-icon"><i data-lucide="sprout"></i></div>
+                <h3>Vegan</h3>
+                <p>Plant-based dishes without any animal products or by-products</p>
+            </article>
+
+            <article class="dietary-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="dietary-icon"><i data-lucide="wheat-off"></i></div>
+                <h3>Gluten-Free</h3>
+                <p>Specialized preparation without any gluten-containing ingredients</p>
+            </article>
+
+            <article class="dietary-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="dietary-icon"><i data-lucide="shield-check"></i></div>
+                <h3>Allergen-Free</h3>
+                <p>Careful preparation avoiding specific allergens with full documentation</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SEASONAL SPECIALTIES ============ -->
+<section class="seasonal-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Year-round Excellence</span>
+            <h2 class="section-title">Seasonal Specialties</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Farm-fresh seasonal dishes that celebrate local harvest</p>
+        </div>
+
+        <div class="seasonal-grid">
+            <article class="seasonal-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="seasonal-icon"><i data-lucide="sun"></i></div>
+                <h3>Summer Menu</h3>
+                <p>Light, refreshing dishes perfect for warm weather</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Cooling Rasam</li>
+                    <li><i data-lucide="check"></i> Fresh Vegetable Salads</li>
+                    <li><i data-lucide="check"></i> Mango-based Dishes</li>
+                    <li><i data-lucide="check"></i> Coconut Curries</li>
+                </ul>
+            </article>
+
+            <article class="seasonal-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="seasonal-icon"><i data-lucide="snowflake"></i></div>
+                <h3>Winter Menu</h3>
+                <p>Rich, warming dishes for the cooler season</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Root Vegetable Curries</li>
+                    <li><i data-lucide="check"></i> Hearty Sambar</li>
+                    <li><i data-lucide="check"></i> Sesame Preparations</li>
+                    <li><i data-lucide="check"></i> Warm Desserts</li>
+                </ul>
+            </article>
+
+            <article class="seasonal-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="seasonal-icon"><i data-lucide="wheat"></i></div>
+                <h3>Festival Menu</h3>
+                <p>Traditional festival dishes for celebrations</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Pongal Specialties</li>
+                    <li><i data-lucide="check"></i> Diwali Sweets</li>
+                    <li><i data-lucide="check"></i> New Year Dishes</li>
+                    <li><i data-lucide="check"></i> Festival Pastes</li>
+                </ul>
+            </article>
+
+            <article class="seasonal-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="seasonal-icon"><i data-lucide="party-popper"></i></div>
+                <h3>Celebration Menu</h3>
+                <p>Premium dishes for special occasions</p>
+                <ul>
+                    <li><i data-lucide="check"></i> Wedding Biryani</li>
+                    <li><i data-lucide="check"></i> Premium Meats</li>
+                    <li><i data-lucide="check"></i> Exotic Curries</li>
+                    <li><i data-lucide="check"></i> Premium Desserts</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BEVERAGES & DESSERTS ============ -->
+<section class="beverages-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Complete Experience</span>
+            <h2 class="section-title">Beverages &amp; Sweet Endings</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Complement your meal with our curated beverages and signature desserts</p>
+        </div>
+
+        <div class="beverages-grid">
+            <article class="beverage-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="beverage-icon"><i data-lucide="coffee"></i></div>
+                <h3>Traditional Beverages</h3>
+                <ul>
+                    <li><i data-lucide="check"></i> Masala Chai</li>
+                    <li><i data-lucide="check"></i> Filter Coffee</li>
+                    <li><i data-lucide="check"></i> Lassi</li>
+                    <li><i data-lucide="check"></i> Traditional Drinks</li>
+                </ul>
+            </article>
+
+            <article class="beverage-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="beverage-icon"><i data-lucide="cup-soda"></i></div>
+                <h3>Fresh Juices</h3>
+                <ul>
+                    <li><i data-lucide="check"></i> Seasonal Fruit Juices</li>
+                    <li><i data-lucide="check"></i> Sugarcane Juice</li>
+                    <li><i data-lucide="check"></i> Vegetable Juices</li>
+                    <li><i data-lucide="check"></i> Custom Blends</li>
+                </ul>
+            </article>
+
+            <article class="beverage-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="beverage-icon"><i data-lucide="wine"></i></div>
+                <h3>Premium Options</h3>
+                <ul>
+                    <li><i data-lucide="check"></i> Soft Drinks</li>
+                    <li><i data-lucide="check"></i> Mineral Water</li>
+                    <li><i data-lucide="check"></i> Flavored Water</li>
+                    <li><i data-lucide="check"></i> Wine Pairing</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ DESSERT COLLECTION ============ -->
+<section class="dessert-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Indulge</span>
+            <h2 class="section-title">Sweet Endings</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Indulgent desserts and sweets to conclude your meal</p>
+        </div>
+
+        <div class="dessert-grid">
+            <article class="dessert-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="dessert-img">
+                    <i data-lucide="ice-cream-bowl"></i>
+                     <!-- <img src="{% static 'images/payasam.png' %}" alt="Royal Sweets"> -->
+                    
+                </div>
+                <div class="dessert-body">
+                    <h3>Payasam</h3>
+                    <p>Traditional South Indian sweet pudding with nuts and jaggery</p>
+                </div>
+            </article>
+
+            <article class="dessert-card" data-aos="fade-up" data-aos-delay="80">
+                <div class="dessert-img">
+                    <i data-lucide="cookie"></i>
+                    <!-- <img src="{% static 'images/kulabjamun.png' %}" alt="Royal Sweets"> -->
+                </div>
+                <div class="dessert-body">
+                    <h3>Gulab Jamun</h3>
+                    <p>Soft milk solid dumplings soaked in sugar syrup</p>
+                </div>
+            </article>
+
+            <article class="dessert-card" data-aos="fade-up" data-aos-delay="160">
+                <div class="dessert-img">
+                    <i data-lucide="candy"></i>
+                    <!-- <img src="{% static 'images/jelebi.png' %}" alt="Royal Sweets"> -->
+                </div>
+                <div class="dessert-body">
+                    <h3>Jalebi</h3>
+                    <p>Crispy spiral sweets in sugar syrup with authentic flavor</p>
+                </div>
+            </article>
+
+            <article class="dessert-card" data-aos="fade-up" data-aos-delay="240">
+                <div class="dessert-img">
+                    <i data-lucide="cookie"></i>
+                     <!-- <img src="{% static 'images/mysorepark.png' %}" alt="Royal Sweets"> -->
+                </div>
+                <div class="dessert-body">
+                    <h3>Mysore Pak</h3>
+                    <p>Rich groundnut and ghee sweet with melt-in-mouth texture</p>
+                </div>
+            </article>
+
+            <article class="dessert-card" data-aos="fade-up" data-aos-delay="320">
+                <div class="dessert-img">
+                    <i data-lucide="ice-cream-cone"></i>
+                    <!-- <img src="{% static 'images/halwa.png' %}" alt="Royal Sweets"> -->
+                </div>
+                <div class="dessert-body">
+                    <h3>Halwa</h3>
+                    <p>Aromatic semolina or vegetable halwa with nuts and dates</p>
+                </div>
+            </article>
+
+            <article class="dessert-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="dessert-img">
+                    <i data-lucide="cake"></i>
+                     <!-- <img src="{% static 'images/buffe_image.png' %}" alt="Royal Sweets"> -->
+                </div>
+                <div class="dessert-body">
+                    <h3>Custom Cakes</h3>
+                    <p>Customized cakes for special occasions and celebrations</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MENU CUSTOMIZATION ============ -->
+<section class="customization-section">
+    <div class="container">
+        <div class="customization-grid">
+            <div class="customization-image" data-aos="fade-right">
+                <img src="{% static 'images/menus.png' %}" alt="Chef plating a custom dish"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+
+            <div class="customization-content" data-aos="fade-left">
+                <span class="section-eyebrow">Personalization</span>
+                <h2 class="customization-title">Create Your Perfect Menu</h2>
+                <p>
+                    Not sure which dishes to choose? Our culinary experts work with you to design a menu that perfectly suits your preferences, dietary requirements, and event theme.
+                </p>
+
+                <div class="customization-steps">
+                    <div class="cust-step">
+                        <span class="cust-num">01</span>
+                        <div>
+                            <h4>Share Your Preferences</h4>
+                            <p>Tell us about your tastes, dietary needs, and event style</p>
+                        </div>
+                    </div>
+                    <div class="cust-step">
+                        <span class="cust-num">02</span>
+                        <div>
+                            <h4>Expert Consultation</h4>
+                            <p>Our chef suggests dishes tailored to your requirements</p>
+                        </div>
+                    </div>
+                    <div class="cust-step">
+                        <span class="cust-num">03</span>
+                        <div>
+                            <h4>Tasting Session</h4>
+                            <p>Sample selected dishes before finalizing your menu</p>
+                        </div>
+                    </div>
+                    <div class="cust-step">
+                        <span class="cust-num">04</span>
+                        <div>
+                            <h4>Perfect Execution</h4>
+                            <p>Your customized menu prepared with precision</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'main:contact' %}" class="btn btn-primary">
+                    Consult with Our Chef
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Ready to Delight Your Guests?</h2>
+            <p>Choose from our signature menu or create your custom culinary experience.</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:book_now' %}" class="btn btn-white btn-large">
+                    Book Your Menu Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{% url 'main:contact' %}" class="btn btn-outline btn-large">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Menu tabs interaction
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.menu-tab');
+        const panels = document.querySelectorAll('.menu-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const target = this.getAttribute('data-tab');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+
+                this.classList.add('active');
+                const panel = document.getElementById('panel-' + target);
+                if (panel) {
+                    panel.classList.add('active');
+                    if (window.lucide) window.lucide.createIcons();
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

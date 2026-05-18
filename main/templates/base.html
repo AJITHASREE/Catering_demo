@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#7A1F2B">
+    <meta name="description" content="M.S. Catering Services - Premium South Indian Wedding & Corporate Catering. Royal heritage of culinary excellence since 2002.">
+    <meta name="keywords" content="catering, south indian catering, wedding catering, banana leaf meals, vaazhai ilai sapadu, corporate catering, chennai catering">
+    <title>{% block title %}M.S. Catering Services - Royal South Indian Heritage{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Main Stylesheet (cache-busted) -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=8">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="page-{% if request.resolver_match.url_name %}{{ request.resolver_match.url_name }}{% else %}default{% endif %}">
+
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="{% url 'main:home' %}" class="nav-logo">
+                <span class="logo-text">M.S. Catering Services</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Primary">
+                <button class="nav-close" id="navClose" aria-label="Close menu" type="button">
+                    <i data-lucide="x"></i>
+                </button>
+
+                <ul class="nav-list">
+                    <li><a href="{% url 'main:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">HOME</a></li>
+                    <li><a href="{% url 'main:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">ABOUT</a></li>
+                    <li><a href="{% url 'main:services' %}" class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">SERVICES</a></li>
+                    <li><a href="{% url 'main:menu' %}" class="nav-link {% if request.resolver_match.url_name == 'menu' %}active{% endif %}">MENU</a></li>
+                    <li><a href="{% url 'main:gallery' %}" class="nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">GALLERY</a></li>
+                    <li><a href="{% url 'main:blog' %}" class="nav-link {% if request.resolver_match.url_name == 'blog' %}active{% endif %}">BLOG</a></li>
+                    <li><a href="{% url 'main:contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <a href="{% url 'main:book_now' %}" class="btn btn-primary nav-cta">BOOK NOW</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false" type="button">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu backdrop -->
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">M.S. Catering Services</h3>
+                    <p class="footer-tagline">
+                        Elevating South Indian heritage through cinematic culinary experiences and regal hospitality.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'main:home' %}" class="{% if request.resolver_match.url_name == 'home' %}is-current{% endif %}">Home</a></li>
+                        <li><a href="{% url 'main:about' %}" class="{% if request.resolver_match.url_name == 'about' %}is-current{% endif %}">About Us</a></li>
+                        <li><a href="{% url 'main:services' %}" class="{% if request.resolver_match.url_name == 'services' %}is-current{% endif %}">Our Services</a></li>
+                        <li><a href="{% url 'main:menu' %}" class="{% if request.resolver_match.url_name == 'menu' %}is-current{% endif %}">Wedding Menu</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'main:gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}is-current{% endif %}">Gallery</a></li>
+                        <li><a href="{% url 'main:blog' %}" class="{% if request.resolver_match.url_name == 'blog' %}is-current{% endif %}">Blog</a></li>
+                        <li><a href="{% url 'main:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}is-current{% endif %}">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer-copyright">© {% now "Y" %} M.S. Catering Services. Authentic Heritage Dining.</p>
+        </div>
+    </footer>
+
+    <!-- ============ SCRIPTS (deferred to end of body) ============ -->
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Main JS (cache-busted) — handles icons, AOS, nav, counters, FAQ, smooth scroll -->
+    <script src="{% static 'js/main.js' %}?v=8"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,507 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}M.S. Catering Services — Serving Tradition with Taste | Premium South Indian Catering{% endblock %}
+
+{% block content %}
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero">
+    <!-- Background image -->
+    <div class="hero-bg">
+        <img src="{% static 'images/hero_image.png' %}" alt="Traditional South Indian Vaazhai Ilai feast on banana leaves" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content-wrap">
+        <div class="hero-grid">
+            <!-- Left: text content -->
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>SINCE 2002</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Serving Tradition<br>
+                    with <span class="accent">Taste.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Premium Catering Services for Weddings, Corporate Events &amp; Traditional South Indian Feasts. We bring the royal heritage of culinary excellence to your special moments.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="{% url 'main:book_now' %}" class="btn btn-primary btn-large">
+                        Book Your Event
+                    </a>
+                    <a href="{% url 'main:menu' %}" class="btn btn-outline btn-large">
+                        Explore Menu
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: floating decorative cards -->
+            <div class="hero-decorations" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+                <div class="float-card float-card-sweets">
+                    <div class="float-img">
+                        <!-- <i data-lucide="cookie"></i> -->
+                         <img src="{% static 'images/laddu_image.png' %}" alt="Royal Sweets">
+                    </div>
+                    <h4>Royal Sweets</h4>
+                    <p>Authentic heritage recipes.</p>
+                </div>
+
+                <div class="float-card float-card-counter">
+                    <div class="counter-img">
+                        <!-- <i data-lucide="chef-hat"></i> -->
+                         <img src="{% static 'images/circle_image.png' %}" alt="Royal Sweets">
+                    </div>
+                    <div>
+                        <h4>Live Counters</h4>
+                        <p>Freshly prepared.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICES SECTION ============ -->
+<section class="services">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Our Offerings</span>
+            <h2 class="section-title">Premium Catering Services</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="services-grid">
+            <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-icon">
+                    <i data-lucide="party-popper"></i>
+                </div>
+                <h3 class="service-title">Wedding Catering</h3>
+                <p class="service-description">
+                    Grand feasts fit for royalty. Complete traditional Vaazhai Ilai service with over 30+ items.
+                </p>
+                <a href="{% url 'main:services' %}" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="service-icon">
+                    <i data-lucide="briefcase"></i>
+                </div>
+                <h3 class="service-title">Corporate Catering</h3>
+                <p class="service-description">
+                    Elegant buffet setups and executive lunch boxes tailored for professional gatherings.
+                </p>
+                <a href="{% url 'main:services' %}" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i data-lucide="utensils-crossed"></i>
+                </div>
+                <h3 class="service-title">Buffet Specials</h3>
+                <p class="service-description">
+                    Modern multi-cuisine spreads featuring live cooking counters and premium displays.
+                </p>
+                <a href="{% url 'main:services' %}" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ABOUT PREVIEW SECTION ============ -->
+<section class="about-preview">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image" data-aos="fade-right">
+                <div class="about-image-placeholder">
+                     <img src="{% static 'images/buffe_image.png' %}" alt="Royal Sweets">
+                    <!-- <i data-lucide="chef-hat"></i> -->
+
+                </div>
+                <div class="about-decorator">
+                    <span class="num">22+</span>
+                    <span class="label">Years of Excellence</span>
+                </div>
+            </div>
+
+            <div class="about-content" data-aos="fade-left">
+                <span class="section-eyebrow">Our Story</span>
+                <h2 class="about-title">22 Years of Culinary Excellence</h2>
+
+                <p>
+                    Since 2002, M.S. Catering Services has been delivering premium South Indian cuisine with unmatched quality and service. What started as a passion for authentic flavors has grown into a trusted catering brand.
+                </p>
+                <p>
+                    We specialize in traditional Tamil wedding feasts, modern corporate events, and memorable celebrations with a commitment to excellence in every dish.
+                </p>
+
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon"><i data-lucide="award"></i></div>
+                        <div>
+                            <h4>Premium Quality</h4>
+                            <p>Finest ingredients sourced fresh daily</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i data-lucide="users"></i></div>
+                        <div>
+                            <h4>Expert Team</h4>
+                            <p>Skilled chefs &amp; service staff</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'main:about' %}" class="btn btn-primary">
+                    Learn More About Us
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MENU SHOWCASE ============ -->
+<section class="menu-showcase">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Signature Menu</span>
+            <h2 class="section-title">Taste of Tradition</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Authentic South Indian dishes prepared with love and the finest ingredients
+            </p>
+        </div>
+
+        <div class="menu-grid">
+            <article class="menu-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="menu-card-icon">
+                    <i data-lucide="soup"></i>
+                </div>
+                <h3>Traditional Meals</h3>
+                <ul>
+                    <li><i data-lucide="check"></i> Samai Sadam with Sambar</li>
+                    <li><i data-lucide="check"></i> Kozhambu Annam</li>
+                    <li><i data-lucide="check"></i> Curd Rice</li>
+                </ul>
+            </article>
+
+            <article class="menu-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="menu-card-icon">
+                    <i data-lucide="heart"></i>
+                </div>
+                <h3>Wedding Specials</h3>
+                <ul>
+                    <li><i data-lucide="check"></i> Fragrant Biryani</li>
+                    <li><i data-lucide="check"></i> Paneer 65</li>
+                    <li><i data-lucide="check"></i> Murgh Makhani</li>
+                </ul>
+            </article>
+
+            <article class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="menu-card-icon">
+                    <i data-lucide="utensils"></i>
+                </div>
+                <h3>Buffet Specials</h3>
+                <ul>
+                    <li><i data-lucide="check"></i> Live Dosa Counter</li>
+                    <li><i data-lucide="check"></i> Paneer Tikka</li>
+                    <li><i data-lucide="check"></i> Raita Selection</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="menu-cta" data-aos="fade-up">
+            <a href="{% url 'main:menu' %}" class="btn btn-outline btn-large">
+                View Complete Menu
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BANANA LEAF SECTION ============ -->
+<section class="banana-leaf">
+    <div class="container">
+        <div class="banana-leaf-grid">
+            <div class="banana-leaf-content" data-aos="fade-right">
+                <span class="section-eyebrow">Signature Experience</span>
+                <h2 class="banana-leaf-title">
+                    Traditional Vaazhai Ilai Sapadu
+                </h2>
+                <p>
+                    Experience the authentic taste of South India served on traditional banana leaves. This eco-friendly, traditional serving method enhances the flavor and adds a touch of cultural authenticity to your celebration.
+                </p>
+                <p>
+                    Our banana leaf meals include a complete array of traditional dishes, perfectly complementing the authentic presentation that your guests will cherish.
+                </p>
+                <a href="{% url 'main:menu' %}" class="btn btn-white" style="margin-top: 1rem;">
+                    Order Banana Leaf Meals
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="banana-leaf-image" data-aos="fade-left">
+                <img src="{% static 'images/hero_image.png' %}" alt="Traditional Vaazhai Ilai Sapadu — banana leaf meal" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ STATS SECTION ============ -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="stat-icon"><i data-lucide="heart"></i></div>
+                <div class="stat-number" data-count="1000">1000+</div>
+                <div class="stat-label">Events Catered</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-icon"><i data-lucide="users"></i></div>
+                <div class="stat-number" data-count="50000">50K+</div>
+                <div class="stat-label">Happy Guests</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-icon"><i data-lucide="award"></i></div>
+                <div class="stat-number" data-count="22">22+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-icon"><i data-lucide="utensils"></i></div>
+                <div class="stat-number" data-count="100">100+</div>
+                <div class="stat-label">Menu Items</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WEDDING HIGHLIGHT ============ -->
+<section class="wedding-highlight">
+    <div class="container">
+        <div class="wedding-card" data-aos="fade-up">
+            <div class="wedding-card-image">
+                <!-- <i data-lucide="heart"></i> -->
+                 <img src="{% static 'images/buffe_image.png' %}" alt="Royal Sweets">
+            </div>
+
+            <div class="wedding-card-body">
+                <span class="section-eyebrow">Special Packages</span>
+                <h2>Your Dream Wedding Feast</h2>
+                <p>
+                    Make your wedding day unforgettable with our comprehensive catering packages. From intimate ceremonies to grand celebrations, we handle every detail with perfection.
+                </p>
+
+                <div class="wedding-features">
+                    <div class="wedding-feature">
+                        <div class="check"><i data-lucide="check"></i></div>
+                        <div>
+                            <h4>Customized Menus</h4>
+                            <p>Tailored to your taste and preferences</p>
+                        </div>
+                    </div>
+                    <div class="wedding-feature">
+                        <div class="check"><i data-lucide="check"></i></div>
+                        <div>
+                            <h4>Professional Service</h4>
+                            <p>Trained staff for seamless execution</p>
+                        </div>
+                    </div>
+                    <div class="wedding-feature">
+                        <div class="check"><i data-lucide="check"></i></div>
+                        <div>
+                            <h4>Premium Ingredients</h4>
+                            <p>Only the finest quality materials</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'main:book_now' %}" class="btn btn-primary" style="align-self: flex-start;">
+                    Start Planning Your Wedding
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ GALLERY PREVIEW ============ -->
+<!-- <section class="gallery-preview">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Gallery</span>
+            <h2 class="section-title">Moments of Celebration</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Browse our collection of beautifully catered events
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+            {% for i in "12345678" %}
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:'50' }}">
+                <div class="gallery-placeholder">
+                    <i data-lucide="image"></i>
+                </div>
+                <div class="gallery-overlay"></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="gallery-cta" data-aos="fade-up">
+            <a href="{% url 'main:gallery' %}" class="btn btn-primary btn-large">
+                View Full Gallery
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section> -->
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Testimonials</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="testimonial-quote"><i data-lucide="quote"></i></div>
+                <div class="testimonial-stars">
+                    <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                </div>
+                <p class="testimonial-text">
+                    M.S. Catering made our daughter's wedding unforgettable. The authentic banana leaf meal was absolutely stunning and our guests are still talking about it!
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">PR</div>
+                    <div class="testimonial-author-info">
+                        <h4>Priya Ramachandran</h4>
+                        <p>Wedding Client</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="testimonial-quote"><i data-lucide="quote"></i></div>
+                <div class="testimonial-stars">
+                    <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                </div>
+                <p class="testimonial-text">
+                    Professional, punctual, and the food quality is outstanding. We've used them for multiple corporate events and have never been disappointed.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AK</div>
+                    <div class="testimonial-author-info">
+                        <h4>Arun Krishnan</h4>
+                        <p>Corporate Client</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-quote"><i data-lucide="quote"></i></div>
+                <div class="testimonial-stars">
+                    <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                </div>
+                <p class="testimonial-text">
+                    The traditional Tamil feast they prepared for our family function was authentic and delicious. Highly recommend M.S. Catering for any celebration.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">LS</div>
+                    <div class="testimonial-author-info">
+                        <h4>Lakshmi Subramanian</h4>
+                        <p>Family Event</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">FAQ</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="faq-wrapper">
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <summary>
+                    <span>What is the minimum number of guests for catering?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    We can cater events starting from 15-25 guests depending on the service type. For weddings, we prefer a minimum of 50 guests. Please contact us for customized quotes.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <summary>
+                    <span>Can you accommodate dietary restrictions?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Absolutely! We accommodate vegetarian, vegan, gluten-free, and other dietary requirements. Please inform us during the consultation so we can plan accordingly.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <summary>
+                    <span>How far in advance should we book?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    For weddings, we recommend booking 2-3 months in advance. For other events, 2-4 weeks is typically sufficient. However, we always try to accommodate last-minute requests based on availability.
+                </div>
+            </details>
+
+            <details class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <summary>
+                    <span>Do you provide servers and waitstaff?</span>
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </summary>
+                <div class="faq-content">
+                    Yes, professional service staff is included in our wedding and corporate packages. For smaller events, it's available as an add-on.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Ready to Celebrate?</h2>
+            <p>Let M.S. Catering Services make your event unforgettable. Book your catering today!</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:book_now' %}" class="btn btn-white btn-large">
+                    Book Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{% url 'main:contact' %}" class="btn btn-outline btn-large">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

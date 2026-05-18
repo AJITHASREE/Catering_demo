@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Culinary Heritage — Blog | M.S. Catering Services{% endblock %}
+
+{% block content %}
+
+<!-- ============ BLOG HEADER ============ -->
+<section class="blog-header">
+    <div class="blog-grid-pattern" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="blog-header-inner" data-aos="fade-up">
+            <h1 class="blog-header-title">Culinary Heritage</h1>
+            <p class="blog-header-subtitle">
+                Explore the rich traditions, authentic recipes, and stories behind South Indian wedding feasts.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FEATURED ARTICLE ============ -->
+<section class="blog-featured">
+    <div class="container">
+        <article class="featured-article" data-aos="fade-up">
+            <div class="featured-article-img">
+                <img src="{% static 'images/blog_image.png' %}" alt="Traditional banana leaf feast with rice and curries"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="featured-article-overlay"></div>
+
+            <div class="featured-article-content">
+                <span class="featured-pill">
+                    <i data-lucide="bookmark"></i>
+                    Featured Tradition
+                </span>
+                <h2 class="featured-article-title">The Symphony of a Banana Leaf Feast</h2>
+                <p class="featured-article-excerpt">
+                    Delve into the cultural significance and meticulous orchestration required to serve a traditional 'Ilai Sappadu' at grand Tamil weddings. Every dish has a designated spot, creating a perfect balance of flavors.
+                </p>
+                <a href="#" class="featured-article-link">
+                    Read Full Article
+                    <i data-lucide="arrow-right"></i>
+                     
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ============ FILTER TABS ============ -->
+<section class="blog-filter-section">
+    <div class="container">
+        <div class="blog-filter-tabs" data-aos="fade-up">
+            <button class="blog-tab active" data-filter="all">All Articles</button>
+            <button class="blog-tab" data-filter="recipes">Recipes</button>
+            <button class="blog-tab" data-filter="events">Event Highlights</button>
+            <button class="blog-tab" data-filter="tips">Catering Tips</button>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BLOG POSTS GRID ============ -->
+<section class="blog-posts-section">
+    <div class="container">
+        <div class="blog-posts-grid">
+
+            <article class="blog-post-card" data-category="recipes" data-aos="fade-up" data-aos-delay="0">
+                <div class="blog-post-img">
+                    <img src="{% static 'images/blog1_image.png' %}" alt="Brass kettle pouring South Indian filter coffee"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="blog-post-body">
+                    <span class="blog-post-category">Recipes</span>
+                    <h3 class="blog-post-title">Mastering the Authentic Filter Coffee</h3>
+                    <p class="blog-post-excerpt">
+                        The secret to the perfect froth and decoction ratio that defines a true South Indian morning experience at our catered events.
+                    </p>
+                    <div class="blog-post-divider"></div>
+                    <a href="#" class="blog-post-link">
+                        Read Article
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-post-card" data-category="events" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-post-img">
+                    <img src="{% static 'images/blog2_image.png' %}" alt="Elegant Chennai wedding hall with chandeliers"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="blog-post-body">
+                    <span class="blog-post-category">Event Highlights</span>
+                    <h3 class="blog-post-title">A Royal Chennai Wedding Affair</h3>
+                    <p class="blog-post-excerpt">
+                        Behind the scenes of curating a 1000-guest heritage menu that perfectly blended traditional flavors with modern presentation.
+                    </p>
+                    <div class="blog-post-divider"></div>
+                    <a href="#" class="blog-post-link">
+                        Read Article
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-post-card" data-category="tips" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-post-img">
+                    <img src="{% static 'images/blog3_image.png' %}" alt="Variety of curries and dishes overhead view"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="blog-post-body">
+                    <span class="blog-post-category">Catering Tips</span>
+                    <h3 class="blog-post-title">Planning Your Wedding Menu</h3>
+                    <p class="blog-post-excerpt">
+                        Essential advice on balancing dietary requirements, seasonal ingredients, and crowd-pleasing traditional favorites for your big day.
+                    </p>
+                    <div class="blog-post-divider"></div>
+                    <a href="#" class="blog-post-link">
+                        Read Article
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-post-card" data-category="recipes" data-aos="fade-up" data-aos-delay="0">
+                <div class="blog-post-img">
+                    <img src="{% static 'images/blog4_image.png' %}" alt="Traditional Payasam dessert in brass bowl"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="blog-post-body">
+                    <span class="blog-post-category">Recipes</span>
+                    <h3 class="blog-post-title">Traditional Payasam Recipes Decoded</h3>
+                    <p class="blog-post-excerpt">
+                        Discover the authentic recipes and family stories behind South India's most beloved festival dessert preparations.
+                    </p>
+                    <div class="blog-post-divider"></div>
+                    <a href="#" class="blog-post-link">
+                        Read Article
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-post-card" data-category="tips" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-post-img">
+                    <img src="{% static 'images/blog5_image.png' %}" alt="Corporate event catering setup"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="blog-post-body">
+                    <span class="blog-post-category">Catering Tips</span>
+                    <h3 class="blog-post-title">Corporate Event Catering Excellence</h3>
+                    <p class="blog-post-excerpt">
+                        How to impress your clients and colleagues with professional catering that balances sophistication with authentic flavor.
+                    </p>
+                    <div class="blog-post-divider"></div>
+                    <a href="#" class="blog-post-link">
+                        Read Article
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-post-card" data-category="events" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-post-img">
+                    <img src="{% static 'images/blog6_image.png' %}" alt="Outdoor garden wedding setup"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="blog-post-body">
+                    <span class="blog-post-category">Event Highlights</span>
+                    <h3 class="blog-post-title">Seasonal Cooking with South India</h3>
+                    <p class="blog-post-excerpt">
+                        Making the most of seasonal ingredients in your catering menu throughout the year for unforgettable celebrations.
+                    </p>
+                    <div class="blog-post-divider"></div>
+                    <a href="#" class="blog-post-link">
+                        Read Article
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content" data-aos="fade-up">
+            <span class="section-eyebrow gold-on-dark">Stay Connected</span>
+            <h2 class="newsletter-title">Subscribe to Our Stories</h2>
+            <p class="newsletter-subtitle">
+                Get exclusive recipes, event insights, and seasonal menu updates delivered to your inbox.
+            </p>
+
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-gold">
+                    Subscribe
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </form>
+
+            <p class="newsletter-disclaimer">We respect your privacy. Unsubscribe anytime.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Have Questions About Catering?</h2>
+            <p>Get in touch with our team to discuss your event needs.</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:contact' %}" class="btn btn-white btn-large">
+                    Contact Us
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{% url 'main:book_now' %}" class="btn btn-outline btn-large">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.blog-tab');
+        const cards = document.querySelectorAll('.blog-post-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const filter = this.getAttribute('data-filter');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                        setTimeout(() => card.classList.remove('hidden'), 10);
+                    } else {
+                        card.classList.add('hidden');
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

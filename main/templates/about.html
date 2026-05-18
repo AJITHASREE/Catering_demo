@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About M.S. Catering Services — Crafting Culinary Legacy Since 2002{% endblock %}
+
+{% block content %}
+
+<!-- ============ ABOUT HERO ============ -->
+<section class="about-hero">
+    <div class="container">
+        <div class="about-hero-card" data-aos="fade-up" data-aos-duration="900">
+            <!-- Background image - replace this with your real hero image -->
+            <div class="about-hero-img">
+                <img src="{% static 'images/background_about.jpg' %}" alt="Elegant dining table setting with crystal glasses and roses" loading="eager"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+            </div>
+            <div class="about-hero-overlay"></div>
+
+            <div class="about-hero-content">
+                <span class="hero-pill">
+                    <i data-lucide="badge-check"></i>
+                    HERITAGE OF TASTE
+                </span>
+                <h1 class="about-hero-title">
+                    Crafting Culinary Legacy Since <span class="accent-gold">2002.</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ A JOURNEY OF FLAVORS ============ -->
+<section class="journey-section">
+    <div class="container">
+        <div class="journey-grid">
+            <!-- Left: Text content -->
+            <div class="journey-content" data-aos="fade-right">
+                <h2 class="journey-title">A Journey of Flavors</h2>
+
+                <p>
+                    What began as an intimate family endeavor in the heart of Tamil Nadu has blossomed into a hallmark of premier catering. Our story is woven with the rich threads of generational recipes, where every spice is a memory and every meal is a celebration.
+                </p>
+
+                <p>
+                    We don't just serve food; we recreate the authentic sensory richness of a grand wedding feast. From the rhythmic clatter of traditional kitchens to the meticulous final garnish, our commitment to millennial minimalism paired with regal heritage ensures an unforgettable dining experience.
+                </p>
+
+                <div class="journey-stat">
+                    <div class="stat-number-large">20<span class="plus">+</span></div>
+                    <div class="stat-label-line"></div>
+                    <div class="stat-text">YEARS OF EXCELLENCE</div>
+                </div>
+            </div>
+
+            <!-- Right: Main image + overlapping spice image -->
+            <div class="journey-visual" data-aos="fade-left">
+                <div class="journey-main-img">
+                    <img src="{% static 'images/about1.jpg' %}" alt="Traditional brass cooking pot with steam"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+                <div class="journey-overlap-img">
+                    <img src="{% static 'images/kulabjamun.png' %}" alt="Aromatic Indian spices arranged on marble"
+                         onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MISSION & VISION CARDS ============ -->
+<section class="mission-vision">
+    <div class="container">
+        <div class="mv-grid">
+            <!-- Mission Card -->
+            <article class="mv-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="mv-icon">
+                    <i data-lucide="utensils-crossed"></i>
+                </div>
+                <h3 class="mv-title">Our Mission</h3>
+                <p>
+                    To elevate the traditional South Indian feast into a sophisticated, sensory journey. We blend impeccable service with authentic flavors, ensuring every event we cater becomes a cherished memory marked by elegance and unparalleled hospitality.
+                </p>
+            </article>
+
+            <!-- Vision Card -->
+            <article class="mv-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="mv-icon">
+                    <i data-lucide="eye"></i>
+                </div>
+                <h3 class="mv-title">Our Vision</h3>
+                <p>
+                    To be the premier standard for high-end cultural catering, seamlessly marrying millennial minimalism with the regal heritage of Tamil dining. We envision a future where tradition is celebrated through a lens of modern luxury.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CORE VALUES ============ -->
+<section class="core-values">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">What Drives Us</span>
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">These principles guide everything we do</p>
+        </div>
+
+        <div class="values-grid">
+            <article class="value-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="value-icon"><i data-lucide="chef-hat"></i></div>
+                <h3>Quality</h3>
+                <p>Premium ingredients and meticulous preparation in every dish</p>
+            </article>
+
+            <article class="value-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="value-icon"><i data-lucide="handshake"></i></div>
+                <h3>Integrity</h3>
+                <p>Honest communication and transparent dealings with every client</p>
+            </article>
+
+            <article class="value-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="value-icon"><i data-lucide="zap"></i></div>
+                <h3>Excellence</h3>
+                <p>Exceeding expectations in service, taste, and presentation</p>
+            </article>
+
+            <article class="value-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="value-icon"><i data-lucide="leaf"></i></div>
+                <h3>Sustainability</h3>
+                <p>Eco-friendly practices and responsible sourcing</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOUNDER SPOTLIGHT ============ -->
+<section class="founder-spotlight">
+    <div class="container">
+        <div class="founder-grid">
+            <div class="founder-image" data-aos="fade-right">
+                <img src="{% static 'images/chef_image.jpg' %}" alt="Chef Muralidharan Iyer - Founder of M.S. Catering"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="founder-image-fallback">
+                    <i data-lucide="chef-hat"></i>
+                </div>
+            </div>
+
+            <div class="founder-content" data-aos="fade-left">
+                <span class="section-eyebrow gold-on-dark">Meet The Founder</span>
+                <h2>Chef Muralidharan Iyer</h2>
+                <p class="founder-role">Founder &amp; Head Chef</p>
+
+                <p>
+                    With over 22 years of culinary expertise in South Indian cuisine, Chef Muralidharan has mastered the art of traditional cooking while innovating for modern palates. His passion for authentic flavors and commitment to excellence has made M.S. Catering Services a household name.
+                </p>
+
+                <ul class="founder-list">
+                    <li><i data-lucide="check"></i> Trained in traditional Tamil cooking</li>
+                    <li><i data-lucide="check"></i> Expert in wedding and festival menus</li>
+                    <li><i data-lucide="check"></i> Committed to food safety and hygiene</li>
+                    <li><i data-lucide="check"></i> Mentor to the next generation of chefs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HERITAGE & TRADITION ============ -->
+<section class="heritage-section">
+    <div class="container">
+        <div class="heritage-grid">
+            <div class="heritage-content" data-aos="fade-right">
+                <span class="section-eyebrow">Tradition Meets Today</span>
+                <h2 class="heritage-title">Rooted in Tradition</h2>
+
+                <p>
+                    Every dish we serve is a testament to our respect for South Indian culinary traditions. We source traditional recipes from various regions of Tamil Nadu and prepare them with the same care and precision as they would be in traditional kitchens.
+                </p>
+                <p>
+                    Our commitment to authenticity doesn't mean we're stuck in the past. We blend traditional flavors with modern presentation and service standards to create memorable experiences for today's discerning clientele.
+                </p>
+
+                <div class="heritage-list">
+                    <div class="heritage-item">
+                        <div class="heritage-icon-wrap"><i data-lucide="leaf"></i></div>
+                        <div>
+                            <h4>Banana Leaf Tradition</h4>
+                            <p>Serving on banana leaves as per custom</p>
+                        </div>
+                    </div>
+                    <div class="heritage-item">
+                        <div class="heritage-icon-wrap"><i data-lucide="flame"></i></div>
+                        <div>
+                            <h4>Authentic Spice Blends</h4>
+                            <p>Time-tested recipes and masalas</p>
+                        </div>
+                    </div>
+                    <div class="heritage-item">
+                        <div class="heritage-icon-wrap"><i data-lucide="sparkles"></i></div>
+                        <div>
+                            <h4>Festival Specialties</h4>
+                            <p>Traditional festival dishes for every occasion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heritage-image" data-aos="fade-left">
+                <img src="{% static 'images/leaf_image.jpg' %}" alt="Traditional South Indian heritage cooking"
+                     onerror="this.style.display='none';this.parentElement.classList.add('no-img')">
+                <div class="heritage-image-fallback">
+                    <i data-lucide="leaf"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ AWARDS & RECOGNITION ============ -->
+<section class="awards-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">Achievements</span>
+            <h2 class="section-title">Recognition &amp; Awards</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="awards-grid">
+            <article class="award-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="award-icon"><i data-lucide="trophy"></i></div>
+                <h3>Best Catering Service</h3>
+                <p>Tamil Nadu Hospitality Awards 2023</p>
+            </article>
+
+            <article class="award-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="award-icon"><i data-lucide="star"></i></div>
+                <h3>Excellence in Service</h3>
+                <p>Chennai Event Planners Association 2022</p>
+            </article>
+
+            <article class="award-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="award-icon"><i data-lucide="medal"></i></div>
+                <h3>Most Trusted Brand</h3>
+                <p>South Indian Wedding Awards 2021</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-choose">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-eyebrow">The M.S. Difference</span>
+            <h2 class="section-title">Why Choose M.S. Catering</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="why-grid">
+            <article class="why-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="why-icon"><i data-lucide="calendar-check"></i></div>
+                <div>
+                    <h3>22 Years Experience</h3>
+                    <p>Deep expertise in catering for all occasions</p>
+                </div>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-icon"><i data-lucide="users"></i></div>
+                <div>
+                    <h3>Expert Team</h3>
+                    <p>Trained professionals dedicated to excellence</p>
+                </div>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="why-icon"><i data-lucide="utensils"></i></div>
+                <div>
+                    <h3>Authentic Cuisine</h3>
+                    <p>Traditional South Indian recipes perfected</p>
+                </div>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="why-icon"><i data-lucide="shield-check"></i></div>
+                <div>
+                    <h3>Quality Assurance</h3>
+                    <p>Strict standards in every dish and service</p>
+                </div>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="why-icon"><i data-lucide="settings-2"></i></div>
+                <div>
+                    <h3>Customization</h3>
+                    <p>Personalized menus for your preferences</p>
+                </div>
+            </article>
+
+            <article class="why-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="why-icon"><i data-lucide="heart"></i></div>
+                <div>
+                    <h3>Client Satisfaction</h3>
+                    <p>100% commitment to your happiness</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+            <h2>Experience Our Excellence</h2>
+            <p>Let us be part of your special celebration. Book your event with M.S. Catering Services today.</p>
+            <div class="cta-actions">
+                <a href="{% url 'main:book_now' %}" class="btn btn-white btn-large">
+                    Book Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{% url 'main:contact' %}" class="btn btn-outline btn-large">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
