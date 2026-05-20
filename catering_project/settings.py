@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-ms-catering-services-2024-premium-website'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 # Application definition
 INSTALLED_APPS = [
